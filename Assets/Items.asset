@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11565ce53fb924eae6672dbfb4b880, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  itemBases:
+  - name: grenade
+    sprite: {fileID: 2350998130632985514, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 0
+  categories:
+  - id: default
+    prefixes:
+    - normal
+    - average
+    - default
+    - usual
+    - standard
+    - ordinary
+    - stock
+    - typical
+    - expected
+    - regular
+    - daily
+    - traditional
+    - simple
+    - vanilla
+    - plain
+    - dull
+    sufixes:
+    - disappointment
+    - boredoom
+    - dullness
+    - greyness
+    - generalization
+    - standardization
+    - fear to change
+    - simplicity
+    - '"meh"'
+    - weariness
+    - apathy
+    - tedium
+    - flatness
+    - uniformity
+    - lack of interest
+    - frustration
+    valueMultiplierMin: 1
+    valueMultiplierMax: 1
+    color: {r: 0.9921569, g: 0.9921569, b: 0.9725491, a: 0}
+  - id: set
+    prefixes: []
+    sufixes: []
+    valueMultiplierMin: 0
+    valueMultiplierMax: 0
+    color: {r: 0, g: 1, b: 0.15822792, a: 0}
+  - id: magic
+    prefixes: []
+    sufixes: []
+    valueMultiplierMin: 0
+    valueMultiplierMax: 0
+    color: {r: 0, g: 0.5795455, b: 1, a: 0}
+  - id: rare
+    prefixes: []
+    sufixes: []
+    valueMultiplierMin: 0
+    valueMultiplierMax: 0
+    color: {r: 0.44444418, g: 0, b: 1, a: 0}
+  - id: legendary
+    prefixes: []
+    sufixes: []
+    valueMultiplierMin: 0
+    valueMultiplierMax: 0
+    color: {r: 1, g: 0.4945652, b: 0, a: 0}
+  statuses:
+  - id: second hand
+    prefixes:
+    - second-hand
+    - owned
+    - used
+    - old
+    - nearly new
+    - worn
+    - pre-owned
+    - handed-down
+    - cast-off
+    - secondary
+    - derived
+    - rip-off
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    sufixes: []
+    valueMultiplierMin: 0.5
+    valueMultiplierMax: 0.8
+    color: {r: 0.4, g: 0.4, b: 0.4, a: 0}
+  - id: new
+    prefixes:
+    - new
+    - contemporary
+    - up to date
+    - original
+    - current
+    - unused
+    - modern
+    - contemporary
+    - fresh
+    - 
+    sufixes:
+    - 
+    - 
+    - 
+    - 
+    - 
+    valueMultiplierMin: 0.8
+    valueMultiplierMax: 1.2
+    color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+  - id: shiny
+    prefixes:
+    - brand new
+    - in mint condition
+    - pristine
+    - shiny
+    - glossy
+    - ultra-modern
+    - avant-garde
+    - glossy
+    - powerful
+    - creative
+    - experimental
+    - high tech
+    - novel
+    - 
+    sufixes: []
+    valueMultiplierMin: 1.2
+    valueMultiplierMax: 1.5
+    color: {r: 0.8, g: 0.8, b: 0.8, a: 0}
+  - id: broken
+    prefixes:
+    - broken
+    - ugly
+    - destroyed
+    - unusable
+    - scrap
+    - garbage
+    - 
+    - exploding
+    - 
+    - 
+    sufixes: []
+    valueMultiplierMin: 1.2
+    valueMultiplierMax: 1.5
+    color: {r: 0.3, g: 0.3, b: 0.3, a: 0}
+  - id: blessed
+    prefixes:
+    - futuristic
+    - blessed
+    - glowing
+    - ultra-powerful
+    - unique
+    - saint
+    - pure
+    - bleeding edge
+    - top secret
+    - 
+    sufixes: []
+    valueMultiplierMin: 1.2
+    valueMultiplierMax: 1.5
+    color: {r: 1, g: 1, b: 1, a: 0}
