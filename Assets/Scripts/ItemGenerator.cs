@@ -90,11 +90,12 @@ public class ItemGenerator : ScriptableObject
         Color.RGBToHSV(cat.color, out ch, out cs, out cv);
         Color.RGBToHSV(status.color, out sh, out ss, out sv);
 
-        h = ch;
-        s = (catRange * .9f) + .1f;
-        v = sv * ((statusRange * .2f) - .1f);
+        h = Mathf.Clamp01(ch);
+        s = Mathf.Clamp01(cs);
+        v = Mathf.Clamp01(sv);
 
-        return Color.HSVToRGB(h, s, v);
+        var c = Color.HSVToRGB(h, s, v, true);
+        return c;
     }
 
     public string GenerateName(ItemBase item, ItemMod cat, ItemMod status)

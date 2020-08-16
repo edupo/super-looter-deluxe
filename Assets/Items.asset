@@ -16,7 +16,42 @@ MonoBehaviour:
   - name: grenade
     sprite: {fileID: 2350998130632985514, guid: 728b5bb937a1c7947b4e3783208f64f6,
       type: 3}
-    value: 0
+    value: 40
+  - name: carrot
+    sprite: {fileID: 916678648114358966, guid: 728b5bb937a1c7947b4e3783208f64f6, type: 3}
+    value: 2
+  - name: bamboo stick
+    sprite: {fileID: 9079028050586164614, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 1
+  - name: shovel
+    sprite: {fileID: -9021162054640469143, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 15
+  - name: crown
+    sprite: {fileID: 3340498543170560129, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 999
+  - name: sword
+    sprite: {fileID: -6776227959769783937, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 50
+  - name: gun
+    sprite: {fileID: -3491254696737965218, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 65
+  - name: firework
+    sprite: {fileID: -1308090215120608283, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 12
+  - name: potion
+    sprite: {fileID: -3972230471002111862, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 20
+  - name: apple
+    sprite: {fileID: -4513850924851354659, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 3
   categories:
   - id: default
     prefixes:
@@ -55,31 +90,77 @@ MonoBehaviour:
     - frustration
     valueMultiplierMin: 1
     valueMultiplierMax: 1
-    color: {r: 0.9921569, g: 0.9921569, b: 0.9725491, a: 0}
+    color: {r: 0.81568635, g: 0.7803922, b: 0.7294118, a: 0}
   - id: set
-    prefixes: []
+    prefixes:
+    - paired
+    - forged
+    - interesting
+    - partial
+    - better
+    - abnormal
+    - 
+    - 
+    - 
+    - 
     sufixes: []
-    valueMultiplierMin: 0
-    valueMultiplierMax: 0
-    color: {r: 0, g: 1, b: 0.15822792, a: 0}
+    valueMultiplierMin: 1
+    valueMultiplierMax: 1.2
+    color: {r: 0.7568628, g: 0.47450984, b: 0.34117648, a: 0}
   - id: magic
-    prefixes: []
+    prefixes:
+    - magical
+    - misterious
+    - supernatural
+    - occult
+    - mystical
+    - mystic
+    - paranormal
+    - secret
+    - preternatural
+    - 
     sufixes: []
-    valueMultiplierMin: 0
-    valueMultiplierMax: 0
-    color: {r: 0, g: 0.5795455, b: 1, a: 0}
+    valueMultiplierMin: 1.2
+    valueMultiplierMax: 1.5
+    color: {r: 0.20784315, g: 0.854902, b: 0.45098042, a: 0}
   - id: rare
-    prefixes: []
+    prefixes:
+    - rare
+    - infrequent
+    - scarce
+    - sparse
+    - golden
+    - powerful
+    - odd
+    - remarkable
+    - exceptional
+    - superior
+    - superlative
+    - excellent
+    - stellar
+    - top-notch
+    - unrivalled
+    - inimitable
     sufixes: []
-    valueMultiplierMin: 0
-    valueMultiplierMax: 0
-    color: {r: 0.44444418, g: 0, b: 1, a: 0}
+    valueMultiplierMin: 1.5
+    valueMultiplierMax: 5
+    color: {r: 0.22352943, g: 0.68235296, b: 0.8470589, a: 0}
   - id: legendary
-    prefixes: []
+    prefixes:
+    - legendary
+    - fabled
+    - heroic
+    - ancient
+    - fairy-tale
+    - mythical
+    - famous
+    - outstanding
+    - glorous
+    - immortal
     sufixes: []
-    valueMultiplierMin: 0
-    valueMultiplierMax: 0
-    color: {r: 1, g: 0.4945652, b: 0, a: 0}
+    valueMultiplierMin: 5
+    valueMultiplierMax: 20
+    color: {r: 0.9568628, g: 0.7137255, b: 0.078431375, a: 0}
   statuses:
   - id: second hand
     prefixes:

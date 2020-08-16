@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public struct ItemData
+public class ItemData
 {
     public string description;
     public Color color;
