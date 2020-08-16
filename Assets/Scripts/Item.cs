@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public class ItemData
@@ -19,6 +20,8 @@ public class Item : MonoBehaviour
     [Header("References")]
     new public SpriteRenderer renderer;
 
+    public UnityEvent onPicked;
+
     void Start()
     {
         renderer.sprite = data.sprite;
@@ -29,5 +32,11 @@ public class Item : MonoBehaviour
     {
         if (!renderer)
             renderer = GetComponentInChildren<SpriteRenderer>();
+    }
+
+    public void Picked()
+    {
+        onPicked.Invoke();
+        Destroy(gameObject);
     }
 }

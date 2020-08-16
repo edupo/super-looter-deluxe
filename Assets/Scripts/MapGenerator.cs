@@ -25,7 +25,11 @@ public class MapGenerator : MonoBehaviour
     [Range(0f, 1f)]
     public float treeThreshold = .8f;
     [Range(0f, 1f)]
+    public float treeChance = .1f;
+    [Range(0f, 1f)]
     public float waterThreshold = .8f;
+    [Range(0f, 1f)]
+    public float chestThreshold = .1f;
     [Header("References")]
     public Tilemap wallTileMap;
     public Tilemap floorTileMap;
@@ -36,6 +40,7 @@ public class MapGenerator : MonoBehaviour
     public TileBase grassTile;
     public TileBase treeTile;
     public TileBase waterTile;
+    public TileBase chestTile;
 
     public void Clear()
     {
@@ -52,7 +57,7 @@ public class MapGenerator : MonoBehaviour
         Vector3Int[] positions = new Vector3Int[mapSize.x * mapSize.y];
         TileBase[] wallTiles = new TileBase[positions.Length];
         TileBase[] floorTiles = new TileBase[positions.Length];
-        TileBase[] waterTiles = new TileBase[positions.Length];
+        TileBase[] objectTiles = new TileBase[positions.Length];
 
         Vector2 origin = (Vector2)mapSize / 2f;
 
@@ -72,7 +77,7 @@ public class MapGenerator : MonoBehaviour
 
                 float d = Vector2.Distance(origin, (Vector3)coord);
 
-                if (d < playerClearance)
+                if (d < playerClearance) // Skip player clearange
                 {
                     floorTiles[i] = floorTile;
                 }
@@ -80,19 +85,28 @@ public class MapGenerator : MonoBehaviour
                 {
                     wallTiles[i] = wallTile;
                 }
-                else if (humidity > waterThreshold)
+                else if (humidity > waterThreshold) // Too humid == water
                 {
                     wallTiles[i] = waterTile;
                 }
-                else if (humidity > grassThreshold)
+                else if (humidity > treeThreshold && Random.value < treeChance)
                 {
-                    if (humidity > treeThreshold)
-                        wallTiles[i] = treeTile;
+                    wallTiles[i] = treeTile;
+                }
+                else if (Random.value < chestThreshold)
+                {
+                    objectTiles[i] = chestTile;
+                }
+                else if (humidity > grassThreshold) // Humid == grass
+                {
                     floorTiles[i] = grassTile;
                 }
                 else
                 {
-                    floorTiles[i] = floorTile;
+                    if (Random.value < chestThreshold)
+                        objectTiles[i] = chestTile;
+                    else
+                        floorTiles[i] = floorTile;
                 }
 
             }
@@ -100,7 +114,7 @@ public class MapGenerator : MonoBehaviour
 
         wallTileMap.SetTiles(positions, wallTiles);
         floorTileMap.SetTiles(positions, floorTiles);
-        objectTileMap.SetTiles(positions, waterTiles);
+        objectTileMap.SetTiles(positions, objectTiles);
 
         transform.position = -(Vector2)mapSize / 2f;
 
