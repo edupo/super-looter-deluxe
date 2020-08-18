@@ -10,7 +10,7 @@ public class UIActionTextController : UIController
     {
         var item = obj as Item;
         var color = ColorUtility.ToHtmlStringRGB(item.data.color);
-        text.text = $"{w}Got <color=#{color}>{item.data.description} {w}sold for {y}{item.data.value}$";
+        text.text = $"{w}Looted <color=#{color}>{item.data.description} {w}worth {y}{item.data.value}$";
     }
     private void OnValidate()
     {

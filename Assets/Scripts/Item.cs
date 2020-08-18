@@ -20,8 +20,6 @@ public class Item : MonoBehaviour
     [Header("References")]
     new public SpriteRenderer renderer;
 
-    public UnityEvent onPicked;
-
     void Start()
     {
         renderer.sprite = data.sprite;
@@ -36,7 +34,6 @@ public class Item : MonoBehaviour
 
     public void Picked()
     {
-        onPicked.Invoke();
         Destroy(gameObject);
     }
 }

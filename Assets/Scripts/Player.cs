@@ -10,8 +10,17 @@ public class Player : MonoBehaviour
 
     [Header("References")]
     public Rigidbody2D rigidBody;
+    public Loot lootBag;
+
+    [Header("Events")]
+    public GlobalEvent picked;
 
     private Vector2 moveDirection;
+
+    private void Start()
+    {
+        lootBag.Clean();
+    }
 
     void Update()
     {
@@ -26,5 +35,16 @@ public class Player : MonoBehaviour
     {
         if (!rigidBody)
             rigidBody = GetComponent<Rigidbody2D>();
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        var item = collision.gameObject.GetComponentInParent<Item>();
+        if (item)
+        {
+            item.Picked();
+            lootBag.Picked(item);
+            picked.Raise(item);
+        }
     }
 }
