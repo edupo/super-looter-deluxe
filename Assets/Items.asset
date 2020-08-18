@@ -12,6 +12,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11565ce53fb924eae6672dbfb4b880, type: 3}
   m_Name: Items
   m_EditorClassIdentifier: 
+  catProb:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2.8385081
+      outSlope: 2.8385081
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.028481007
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  statusProb:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 3.1361508
+      outSlope: 3.1361508
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.026898742
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   itemBases:
   - name: grenade
     sprite: {fileID: 2350998130632985514, guid: 728b5bb937a1c7947b4e3783208f64f6,
@@ -162,6 +210,27 @@ MonoBehaviour:
     valueMultiplierMax: 20
     color: {r: 0.9568628, g: 0.7137255, b: 0.078431375, a: 0}
   statuses:
+  - id: new
+    prefixes:
+    - new
+    - contemporary
+    - up to date
+    - original
+    - current
+    - unused
+    - modern
+    - contemporary
+    - fresh
+    - 
+    sufixes:
+    - 
+    - 
+    - 
+    - 
+    - 
+    valueMultiplierMin: 0.8
+    valueMultiplierMax: 1.2
+    color: {r: 1, g: 1, b: 1, a: 0}
   - id: second hand
     prefixes:
     - second-hand
@@ -187,28 +256,7 @@ MonoBehaviour:
     sufixes: []
     valueMultiplierMin: 0.5
     valueMultiplierMax: 0.8
-    color: {r: 0.4, g: 0.4, b: 0.4, a: 0}
-  - id: new
-    prefixes:
-    - new
-    - contemporary
-    - up to date
-    - original
-    - current
-    - unused
-    - modern
-    - contemporary
-    - fresh
-    - 
-    sufixes:
-    - 
-    - 
-    - 
-    - 
-    - 
-    valueMultiplierMin: 0.8
-    valueMultiplierMax: 1.2
-    color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    color: {r: 0.8, g: 0.8, b: 0.8, a: 0}
   - id: shiny
     prefixes:
     - brand new
@@ -228,7 +276,7 @@ MonoBehaviour:
     sufixes: []
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
-    color: {r: 0.8, g: 0.8, b: 0.8, a: 0}
+    color: {r: 1, g: 0.9747714, b: 0.8, a: 0}
   - id: broken
     prefixes:
     - broken
@@ -244,7 +292,7 @@ MonoBehaviour:
     sufixes: []
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
-    color: {r: 0.3, g: 0.3, b: 0.3, a: 0}
+    color: {r: 1, g: 0.8, b: 0.8, a: 0}
   - id: blessed
     prefixes:
     - futuristic
@@ -260,4 +308,4 @@ MonoBehaviour:
     sufixes: []
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
-    color: {r: 1, g: 1, b: 1, a: 0}
+    color: {r: 0.8, g: 1, b: 0.9826853, a: 0}

@@ -1,19 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
-public class UIActionTextController : MonoBehaviour
+public class UIActionTextController : UIController
 {
-    public Text text;
+    public TextMeshProUGUI text;
     public void Picked(Object obj)
     {
         var item = obj as Item;
-        text.text = "Got " + item.data.description;
+        var color = ColorUtility.ToHtmlStringRGB(item.data.color);
+        text.text = $"{w}Got <color=#{color}>{item.data.description} {w}sold for {y}{item.data.value}$";
     }
     private void OnValidate()
     {
         if (!text)
-            text = GetComponent<Text>();
+            text = GetComponent<TextMeshProUGUI>();
     }
 }

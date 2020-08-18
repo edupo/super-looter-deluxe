@@ -42,6 +42,11 @@ public class ItemBase
 [CreateAssetMenu]
 public class ItemGenerator : ScriptableObject
 {
+    [Header("Probabilities")]
+    public AnimationCurve catProb;
+    public AnimationCurve statusProb;
+
+    [Header("Descriptors")]
     public List<ItemBase> itemBases;
     public List<ItemMod> categories;
     public List<ItemMod> statuses;
@@ -58,17 +63,17 @@ public class ItemGenerator : ScriptableObject
         ItemData data = new ItemData();
 
         var item = itemBases[Random.Range(0, itemBases.Count)];
-        var cat = categories[Random.Range(0, categories.Count)];
-        var status = statuses[Random.Range(0, statuses.Count)];
-        var catRange = Random.value;
-        var statusRange = Random.value;
+        var cat = categories[Mathf.RoundToInt(catProb.Evaluate(Random.value) * (categories.Count - 1))];
+        var status = statuses[Mathf.RoundToInt(catProb.Evaluate(Random.value) * (statuses.Count - 1))];
+        var catRange = catProb.Evaluate(Random.value);
+        var statusRange = statusProb.Evaluate(Random.value);
 
 
         // Color generation
         
         data.sprite = item.sprite;
         data.description = GenerateName(item, cat, status);
-        data.color = GenerateColor(cat, status, catRange, statusRange);
+        data.color = GenerateColor(cat, status);
         data.value = GenerateValue(item, cat, status, catRange, statusRange);
 
         return data;
@@ -81,7 +86,7 @@ public class ItemGenerator : ScriptableObject
         return (int) (item.value * cvm * svm);
     }
 
-    public Color GenerateColor(ItemMod cat, ItemMod status, float catRange, float statusRange)
+    public Color GenerateColor(ItemMod cat, ItemMod status)
     {
         float h, s, v;
         float ch, cs, cv;

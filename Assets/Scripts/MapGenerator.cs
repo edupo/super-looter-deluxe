@@ -6,6 +6,9 @@ using UnityEngine.Tilemaps;
 
 public class MapGenerator : MonoBehaviour
 {
+    public bool generateOnStart = false;
+    public bool randomOffset = false;
+
     [Header("Noise")]
     [Range(1f,20f)]
     public float noiseSize = 1f;
@@ -30,6 +33,8 @@ public class MapGenerator : MonoBehaviour
     public float waterThreshold = .8f;
     [Range(0f, 1f)]
     public float chestThreshold = .1f;
+    [Range(0f, 1f)]
+    public float itemChance = .1f;
     [Header("References")]
     public Tilemap wallTileMap;
     public Tilemap floorTileMap;
@@ -41,18 +46,36 @@ public class MapGenerator : MonoBehaviour
     public TileBase treeTile;
     public TileBase waterTile;
     public TileBase chestTile;
+    public TileBase objectTile;
+    [Header("Events")]
+    public GlobalEvent generated;
 
     public void Clear()
     {
         wallTileMap.ClearAllTiles();
         floorTileMap.ClearAllTiles();
         objectTileMap.ClearAllTiles();
+    }
 
+    public void Start()
+    {
+        if (generateOnStart)
+        {
+            Generate();
+            generated.Raise();
+        }
+        else
+        {
+            generated.Raise();
+        }
     }
 
     public void Generate()
     {
         Clear();
+
+        if (randomOffset)
+            noiseOffset = new Vector2(Random.Range(0f, 9999999f), Random.Range(0f, 9999999f));
 
         Vector3Int[] positions = new Vector3Int[mapSize.x * mapSize.y];
         TileBase[] wallTiles = new TileBase[positions.Length];
@@ -100,11 +123,15 @@ public class MapGenerator : MonoBehaviour
                 else if (humidity > grassThreshold) // Humid == grass
                 {
                     floorTiles[i] = grassTile;
+                    if (Random.value < itemChance)
+                        objectTiles[i] = objectTile;
                 }
                 else
                 {
                     if (Random.value < chestThreshold)
                         objectTiles[i] = chestTile;
+                    else if (Random.value < itemChance)
+                        objectTiles[i] = objectTile;
                     else
                         floorTiles[i] = floorTile;
                 }

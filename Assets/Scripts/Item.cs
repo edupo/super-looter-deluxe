@@ -9,7 +9,7 @@ public class ItemData
 {
     public string description;
     public Color color;
-    public float value;
+    public int value;
     public Sprite sprite;
 }
 
