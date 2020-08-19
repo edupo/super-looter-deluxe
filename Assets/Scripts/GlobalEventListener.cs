@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class RefUnityEvent : UnityEvent<Object> { }
+public class RefUnityEvent : UnityEvent<object> { }
 public class GlobalEventListener : MonoBehaviour
 {
     public GlobalEvent Event;
@@ -19,7 +19,7 @@ public class GlobalEventListener : MonoBehaviour
         Event.UnregisterListener(this);   
     }
 
-    public void OnEventRaise(Object obj)
+    public void OnEventRaise(object obj)
     {
         Response.Invoke(obj);
     }

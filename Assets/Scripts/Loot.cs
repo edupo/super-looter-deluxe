@@ -10,10 +10,10 @@ public class Loot : ScriptableObject
     //[NonSerialized]
     public List<ItemData> loot;
 
-    public void Picked(UnityEngine.Object obj)
+    public void Picked(object obj)
     {
-        var item = obj as Item;
-        loot.Add(item.data);
+        var item = obj as ItemData;
+        loot.Add(item);
     }
 
     public void Clean()

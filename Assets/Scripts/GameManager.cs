@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public float initialTime = 60f;
+    public float startDelay = 2f;
 
     [Header("Events")]
     public GlobalEvent gameOver;
@@ -15,7 +16,7 @@ public class GameManager : MonoBehaviour
     public GlobalEvent exit;
 
     private float timeToGo;
-    private bool playing;
+    private bool playing = false;
 
     private void Awake()
     {
@@ -25,14 +26,19 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void StartGame(Object obj)
+    public void StartGame()
+    {
+        Invoke("DoStartGame", startDelay);
+    }
+
+    public void DoStartGame()
     {
         timeToGo = initialTime;
         playing = true;
         gameStarted.Raise();
     }
 
-    public void Stop(Object obj)
+    public void Stop()
     {
         playing = false;
     }
@@ -48,8 +54,13 @@ public class GameManager : MonoBehaviour
         if (timeToGo < 0)
         {
             timeToGo = 0f;
-            gameOver.Raise();
-            SceneManager.LoadScene("GameOver");
+            GameOver();
         }
+    }
+
+    public void GameOver()
+    {
+        gameOver.Raise();
+        SceneManager.LoadSceneAsync("GameOver");
     }
 }

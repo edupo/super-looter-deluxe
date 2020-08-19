@@ -465,15 +465,15 @@ MonoBehaviour:
     m_AtlasIndex: 0
   - m_Index: 22
     m_Metrics:
-      m_Width: 16
+      m_Width: 6
       m_Height: 16
-      m_HorizontalBearingX: 8
+      m_HorizontalBearingX: 6.6
       m_HorizontalBearingY: 19
-      m_HorizontalAdvance: 32
+      m_HorizontalAdvance: 17.1
     m_GlyphRect:
-      m_X: 70
+      m_X: 76
       m_Y: 730
-      m_Width: 16
+      m_Width: 6
       m_Height: 16
     m_Scale: 1
     m_AtlasIndex: 0

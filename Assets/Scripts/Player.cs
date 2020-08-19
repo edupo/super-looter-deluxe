@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        rigidBody.velocity = moveDirection * moveSpeed;
+        rigidBody.velocity = moveDirection.normalized * moveSpeed;
     }
 
     public void MovePerformed(InputAction.CallbackContext context)
@@ -37,14 +37,31 @@ public class Player : MonoBehaviour
             rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        var item = collision.gameObject.GetComponentInParent<Item>();
-        if (item)
+        var actuable = collision.gameObject.GetComponent<Interactive>();
+        if (actuable)
         {
-            item.Picked();
-            lootBag.Picked(item);
-            picked.Raise(item);
+            if (actuable is Item)
+            {
+                Item item = actuable as Item;
+                lootBag.Picked(item.data);
+                picked.Raise(item.data);
+            }
+            actuable.Actuate();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var thieve = collision.gameObject.GetComponent<Thieve>();
+        if (thieve) thieve.enabled = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        var thieve = collision.gameObject.GetComponent<Thieve>();
+        if (thieve) thieve.enabled = false;
+    }
 }
+

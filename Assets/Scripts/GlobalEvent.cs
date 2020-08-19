@@ -7,7 +7,7 @@ public class GlobalEvent : ScriptableObject
 {
     private List<GlobalEventListener> listeners = new List<GlobalEventListener>();
 
-    public void Raise(Object obj = null)
+    public void Raise(object obj = null)
     {
         for (int i = listeners.Count - 1; i >= 0 ; i--)
         {

@@ -10,12 +10,18 @@ public class UILootTextGenerator : UIController
 
     void Start()
     {
+        StartCoroutine("Generate");
+    }
+
+    IEnumerator Generate()
+    {
         foreach (var item in loot.loot)
         {
             var go = Instantiate(prefab, transform);
             var text = go.GetComponent<TextMeshProUGUI>();
             var color = ColorUtility.ToHtmlStringRGB(item.color);
             text.text = $"{w}Sold <color=#{color}>{item.description} {w}for {y}{item.value}$";
+            yield return new WaitForSeconds(.1f);
         }        
     }
 }

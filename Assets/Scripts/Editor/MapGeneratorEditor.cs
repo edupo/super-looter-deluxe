@@ -11,6 +11,10 @@ public class MapGeneratorEditor : Editor
         {
             (target as MapGenerator).Generate();
         }
+        if (GUILayout.Button("Clear"))
+        {
+            (target as MapGenerator).Clear();
+        }
         base.OnInspectorGUI();
     }
 }

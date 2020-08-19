@@ -14,10 +14,17 @@ public class UIScoreTextController : UIController
         Print(); 
     }
 
-    public void Picked(Object obj)
+    public void Picked(object obj)
     {
-        var item = obj as Item;
-        total += item.data.value;
+        var item = obj as ItemData;
+        total += item.value;
+        Print();
+    }
+
+    public void Stolen(object obj)
+    {
+        var item = obj as ItemData;
+        total -= item.value;
         Print();
     }
 

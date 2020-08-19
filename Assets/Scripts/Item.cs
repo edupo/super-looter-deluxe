@@ -13,7 +13,7 @@ public class ItemData
     public Sprite sprite;
 }
 
-public class Item : MonoBehaviour
+public class Item : Interactive
 {
     public ItemData data;
 
@@ -32,8 +32,9 @@ public class Item : MonoBehaviour
             renderer = GetComponentInChildren<SpriteRenderer>();
     }
 
-    public void Picked()
+    override public bool Actuate()
     {
         Destroy(gameObject);
+        return true;
     }
 }

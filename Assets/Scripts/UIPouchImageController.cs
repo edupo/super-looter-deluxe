@@ -21,16 +21,16 @@ public class UIPouchImageController : MonoBehaviour
         texture.Apply(false);
     }
 
-    public void Picked(Object obj)
+    public void Picked(object obj)
     {
-        var item = obj as Item;
+        var item = obj as ItemData;
 
-        var rect = item.data.sprite.textureRect;
+        var rect = item.sprite.textureRect;
         int sw = (int)rect.width;
         int sh = (int)rect.height;
         int sx = (int)rect.x;
         int sy = (int)rect.y;
-        var sp = item.data.sprite.texture.GetPixels(sx, sy, sw, sh);
+        var sp = item.sprite.texture.GetPixels(sx, sy, sw, sh);
 
         int iw = texture.width;
         int ih = texture.height;
@@ -41,7 +41,7 @@ public class UIPouchImageController : MonoBehaviour
         for (int i = 0; i < sp.Length; i++)
         {
             if (sp[i].a > .5f)
-                sp[i] = sp[i] * item.data.color;
+                sp[i] = sp[i] * item.color;
             else
                 sp[i] = ip[i];
         }
