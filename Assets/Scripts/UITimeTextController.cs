@@ -10,7 +10,7 @@ public class UITimeTextController : UIController
 
     private void Update()
     {
-        var ttg = GameManager.instance.TimeToGo;
+        var ttg = GameManager.instance.timeToGo;
         string color = w;
         if (ttg < 10)
             color = r;

@@ -37,6 +37,8 @@ public class MapGenerator : MonoBehaviour
     public float itemChance = .1f;
     [Range(0f, 1f)]
     public float thiefChance = .01f;
+    [Range(0f, 1f)]
+    public float timeChance = .05f;
     [Header("References")]
     public Tilemap wallTileMap;
     public Tilemap floorTileMap;
@@ -50,6 +52,7 @@ public class MapGenerator : MonoBehaviour
     public TileBase chestTile;
     public TileBase objectTile;
     public TileBase thiefTile;
+    public TileBase timeTile;
     [Header("Events")]
     public GlobalEvent generated;
 
@@ -137,6 +140,8 @@ public class MapGenerator : MonoBehaviour
                         objectTiles[i] = objectTile;
                     else if (Random.value < thiefChance)
                         objectTiles[i] = thiefTile;
+                    else if (Random.value < timeChance)
+                        objectTiles[i] = timeTile;
                     else
                         floorTiles[i] = floorTile;
                 }

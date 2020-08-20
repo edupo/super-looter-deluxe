@@ -17,7 +17,7 @@ public class ItemMod
 
     public string RandPrefix()
     {
-        if (Random.value < 0.1f || prefixes.Count == 0)
+        if (Random.value < 0.6f || prefixes.Count == 0)
             return "";
         else
             return prefixes[Random.Range(0, prefixes.Count)];
@@ -25,7 +25,7 @@ public class ItemMod
 
     public string RandSuffix()
     {
-        if (Random.value < 0.1f || sufixes.Count == 0)
+        if (Random.value < 0.6f || sufixes.Count == 0)
             return "";
         else
             return sufixes[Random.Range(0, sufixes.Count)];

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,7 +16,8 @@ public class GameManager : MonoBehaviour
     public GlobalEvent gameStarted;
     public GlobalEvent exit;
 
-    private float timeToGo;
+    [NonSerialized]
+    public float timeToGo;
     private bool playing = false;
 
     private void Awake()
@@ -42,8 +44,6 @@ public class GameManager : MonoBehaviour
     {
         playing = false;
     }
-
-    public float TimeToGo { get { return timeToGo; } }
 
     public void Update()
     {

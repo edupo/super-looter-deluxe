@@ -163,6 +163,8 @@ MonoBehaviour:
   lootBag: {fileID: 11400000, guid: 7a23a586bc44a38458374d8f595a17a7, type: 2}
   itemThrowPrefab: {fileID: 6532323617570707755, guid: 432e20bc3d17dd447a64c53673533b7a,
     type: 3}
+  audioSource: {fileID: 1873968987988403801}
+  timePicked: {fileID: 8300000, guid: e999d3901837be94bb5e07cba5324ae3, type: 3}
   picked: {fileID: 11400000, guid: f1952d0578b431d408e34357e3334d6e, type: 2}
   thrown: {fileID: 11400000, guid: 00a104be8bf207546bc1316569b6de76, type: 2}
 --- !u!50 &2570539716965907605

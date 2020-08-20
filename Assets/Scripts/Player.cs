@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public Loot lootBag;
     public GameObject itemThrowPrefab;
     public AudioSource audioSource;
+    public AudioClip timePicked;
 
     [Header("Events")]
     public GlobalEvent picked;
@@ -80,6 +81,10 @@ public class Player : MonoBehaviour
                 lootBag.Picked(item.data);
                 picked.Raise(item.data);
                 PlayAudio(item.data.audio);
+            }
+            if (actuable is TimeItem)
+            {
+                PlayAudio(timePicked);
             }
             actuable.Actuate();
         }

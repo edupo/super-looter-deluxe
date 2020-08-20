@@ -100,6 +100,125 @@ MonoBehaviour:
     sprite: {fileID: -4513850924851354659, guid: 728b5bb937a1c7947b4e3783208f64f6,
       type: 3}
     value: 3
+  - name: cheese
+    sprite: {fileID: 8268630775670334060, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 5
+  - name: diamond ring
+    sprite: {fileID: 6623347554094098748, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 500
+  - name: torii
+    sprite: {fileID: -3308297126281070937, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 1200
+  - name: mans head
+    sprite: {fileID: 1506251865182409717, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 34
+  - name: cat
+    sprite: {fileID: -8655811289787534862, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 69
+  - name: spear
+    sprite: {fileID: 7938219856411021935, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 112
+  - name: belt
+    sprite: {fileID: -85787467857967548, guid: 728b5bb937a1c7947b4e3783208f64f6, type: 3}
+    value: 30
+  - name: minigun
+    sprite: {fileID: 7412807076939807178, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 215
+  - name: book
+    sprite: {fileID: -5132089581293145028, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 20
+  - name: shield
+    sprite: {fileID: 4927970755131464553, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 56
+  - name: scythe
+    sprite: {fileID: -7145914559232681257, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 82
+  - name: torch
+    sprite: {fileID: -6414341988987347148, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 42
+  - name: bag
+    sprite: {fileID: -2648906491873804333, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 15
+  - name: crossbow
+    sprite: {fileID: 1883439807261745825, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 75
+  - name: iron door
+    sprite: {fileID: -2504376265210621098, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 67
+  - name: steak
+    sprite: {fileID: -138236662822711581, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 28
+  - name: fish
+    sprite: {fileID: -8085704851417410965, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 17
+  - name: mouse cursor
+    sprite: {fileID: -4119213621622203491, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 666
+  - name: long sword
+    sprite: {fileID: -698501928561579325, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 65
+  - name: viking axe
+    sprite: {fileID: -7030376650569107992, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 71
+  - name: amulet
+    sprite: {fileID: 9020344990497547323, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 45
+  - name: dog
+    sprite: {fileID: -5195223206150920056, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 1000
+  - name: bow
+    sprite: {fileID: -1213865028330883635, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 56
+  - name: pickaxe
+    sprite: {fileID: -1891240052739437056, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 71
+  - name: bomb
+    sprite: {fileID: 6817939660846692533, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 45
+  - name: heart
+    sprite: {fileID: -4603842634992257663, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 27
+  - name: toilet
+    sprite: {fileID: 5037997844482440832, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 55
+  - name: pear
+    sprite: {fileID: -1767472212215467000, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 3
+  - name: trophy
+    sprite: {fileID: -1504321815761285044, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 1234
+  - name: graveyard
+    sprite: {fileID: -7178617465751099960, guid: 728b5bb937a1c7947b4e3783208f64f6,
+      type: 3}
+    value: 230
   categories:
   - id: default
     prefixes:
@@ -136,6 +255,7 @@ MonoBehaviour:
     - uniformity
     - lack of interest
     - frustration
+    - vagrants
     valueMultiplierMin: 1
     valueMultiplierMax: 1
     color: {r: 0.81568635, g: 0.7803922, b: 0.7294118, a: 0}
@@ -148,11 +268,19 @@ MonoBehaviour:
     - partial
     - better
     - abnormal
-    - 
-    - 
-    - 
-    - 
-    sufixes: []
+    - designed
+    - slightly better
+    - better
+    - tinkered
+    sufixes:
+    - good desig
+    - proud
+    - litigation
+    - good people
+    - interest
+    - development
+    - bougieness
+    - accommodated people
     valueMultiplierMin: 1
     valueMultiplierMax: 1.2
     color: {r: 0.7568628, g: 0.47450984, b: 0.34117648, a: 0}
@@ -168,8 +296,17 @@ MonoBehaviour:
     - paranormal
     - secret
     - preternatural
-    - 
-    sufixes: []
+    sufixes:
+    - Simon the sorcerrer
+    - Merlin
+    - Yoda
+    - Dumbledore
+    - Morgana
+    - Harry
+    - Gandalf
+    - Mages
+    - Mysticism
+    - Secrecy
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
     color: {r: 0.20784315, g: 0.854902, b: 0.45098042, a: 0}
@@ -192,7 +329,18 @@ MonoBehaviour:
     - top-notch
     - unrivalled
     - inimitable
-    sufixes: []
+    - grand
+    sufixes:
+    - weirdness
+    - power
+    - chivalry
+    - bitcoins
+    - Finn
+    - Leprechauns
+    - rendition
+    - conquest
+    - winners
+    - kings
     valueMultiplierMin: 1.5
     valueMultiplierMax: 5
     color: {r: 0.22352943, g: 0.68235296, b: 0.8470589, a: 0}
@@ -209,7 +357,18 @@ MonoBehaviour:
     - outstanding
     - glorous
     - immortal
-    sufixes: []
+    - humble
+    sufixes:
+    - immortallity
+    - glory
+    - the legends
+    - the famous
+    - Jake
+    - Miyamoto
+    - Super Meat Boy
+    - Yoshi
+    - Link
+    - Zelda
     valueMultiplierMin: 5
     valueMultiplierMax: 20
     color: {r: 0.9568628, g: 0.7137255, b: 0.078431375, a: 0}
@@ -226,13 +385,11 @@ MonoBehaviour:
     - modern
     - contemporary
     - fresh
-    - 
     sufixes:
-    - 
-    - 
-    - 
-    - 
-    - 
+    - cleanliness
+    - freshness
+    - modern times
+    - the present
     valueMultiplierMin: 0.8
     valueMultiplierMax: 1.2
     color: {r: 1, g: 1, b: 1, a: 0}
@@ -251,15 +408,10 @@ MonoBehaviour:
     - secondary
     - derived
     - rip-off
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    sufixes: []
+    sufixes:
+    - mediocrity
+    - nothing
+    - average
     valueMultiplierMin: 0.5
     valueMultiplierMax: 0.8
     color: {r: 0.8, g: 0.8, b: 0.8, a: 0}
@@ -279,8 +431,11 @@ MonoBehaviour:
     - experimental
     - high tech
     - novel
-    - 
-    sufixes: []
+    sufixes:
+    - golden shine
+    - pure clarity
+    - incredible ballance
+    - outstanding capabilities
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
     color: {r: 1, g: 0.9747714, b: 0.8, a: 0}
@@ -291,13 +446,12 @@ MonoBehaviour:
     - ugly
     - destroyed
     - unusable
-    - scrap
+    - crappy
     - garbage
-    - 
     - exploding
-    - 
-    - 
-    sufixes: []
+    sufixes:
+    - shit
+    - oblivion
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
     color: {r: 1, g: 0.8, b: 0.8, a: 0}
@@ -313,8 +467,12 @@ MonoBehaviour:
     - pure
     - bleeding edge
     - top secret
-    - 
-    sufixes: []
+    sufixes:
+    - damascus
+    - clean soul and body
+    - reflection
+    - pure power
+    - money
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
     color: {r: 0.8, g: 1, b: 0.9826853, a: 0}
