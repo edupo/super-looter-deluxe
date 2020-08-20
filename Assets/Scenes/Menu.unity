@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5208,7 +5208,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291019860}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -5965,6 +5965,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d01147bc0f2a203459a3ea2c0780682d, type: 3}
+--- !u!1 &1478329328 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5236659005484208451, guid: d01147bc0f2a203459a3ea2c0780682d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1478329327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1478329329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478329328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aafcd906ee56c64599a37fc0ac12698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameScene: Game
+  tutorScene: Tutorial 0
+  alwaysTutorial: 0
 --- !u!1001 &1548753939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6264,7 +6285,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572338384}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -6299,7 +6320,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1478329327}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1478329328}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}

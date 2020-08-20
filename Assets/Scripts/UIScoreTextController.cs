@@ -28,6 +28,13 @@ public class UIScoreTextController : UIController
         Print();
     }
 
+    public void Thrown(object obj)
+    {
+        var item = obj as ItemData;
+        total -= item.value;
+        Print();
+    }
+
     public void Print()
     {
         text.text = $"{y}{total}$";

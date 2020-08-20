@@ -139,6 +139,7 @@ MonoBehaviour:
     valueMultiplierMin: 1
     valueMultiplierMax: 1
     color: {r: 0.81568635, g: 0.7803922, b: 0.7294118, a: 0}
+    audio: {fileID: 8300000, guid: 5fd52bfccf0b1384486f8b20bdab0498, type: 3}
   - id: set
     prefixes:
     - paired
@@ -155,6 +156,7 @@ MonoBehaviour:
     valueMultiplierMin: 1
     valueMultiplierMax: 1.2
     color: {r: 0.7568628, g: 0.47450984, b: 0.34117648, a: 0}
+    audio: {fileID: 8300000, guid: 4d2228da29f9e47448a3f8369002fc9a, type: 3}
   - id: magic
     prefixes:
     - magical
@@ -171,6 +173,7 @@ MonoBehaviour:
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
     color: {r: 0.20784315, g: 0.854902, b: 0.45098042, a: 0}
+    audio: {fileID: 8300000, guid: e40addbcdb9205d4e9cdf11f0ad53734, type: 3}
   - id: rare
     prefixes:
     - rare
@@ -193,6 +196,7 @@ MonoBehaviour:
     valueMultiplierMin: 1.5
     valueMultiplierMax: 5
     color: {r: 0.22352943, g: 0.68235296, b: 0.8470589, a: 0}
+    audio: {fileID: 8300000, guid: c3f22ae515a1ad3488c4ab83621aa06b, type: 3}
   - id: legendary
     prefixes:
     - legendary
@@ -209,6 +213,7 @@ MonoBehaviour:
     valueMultiplierMin: 5
     valueMultiplierMax: 20
     color: {r: 0.9568628, g: 0.7137255, b: 0.078431375, a: 0}
+    audio: {fileID: 8300000, guid: 738ec7fcd7ecb3c45b4a5f214fabfc28, type: 3}
   statuses:
   - id: new
     prefixes:
@@ -231,6 +236,7 @@ MonoBehaviour:
     valueMultiplierMin: 0.8
     valueMultiplierMax: 1.2
     color: {r: 1, g: 1, b: 1, a: 0}
+    audio: {fileID: 0}
   - id: second hand
     prefixes:
     - second-hand
@@ -257,6 +263,7 @@ MonoBehaviour:
     valueMultiplierMin: 0.5
     valueMultiplierMax: 0.8
     color: {r: 0.8, g: 0.8, b: 0.8, a: 0}
+    audio: {fileID: 0}
   - id: shiny
     prefixes:
     - brand new
@@ -277,6 +284,7 @@ MonoBehaviour:
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
     color: {r: 1, g: 0.9747714, b: 0.8, a: 0}
+    audio: {fileID: 0}
   - id: broken
     prefixes:
     - broken
@@ -293,6 +301,7 @@ MonoBehaviour:
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
     color: {r: 1, g: 0.8, b: 0.8, a: 0}
+    audio: {fileID: 0}
   - id: blessed
     prefixes:
     - futuristic
@@ -309,3 +318,4 @@ MonoBehaviour:
     valueMultiplierMin: 1.2
     valueMultiplierMax: 1.5
     color: {r: 0.8, g: 1, b: 0.9826853, a: 0}
+    audio: {fileID: 0}

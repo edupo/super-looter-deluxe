@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum ThieveStatus
 {
-    idle,
     following,
     escaping,
 }
 
-public class Thieve : MonoBehaviour
+public class Thief : MonoBehaviour
 {
     public float moveSpeed = 8f;
-    public static float stealChance = 0.4f;
+    public float stealChance = 0.4f;
     public float escapeChance = 0.5f;
-    public ThieveStatus state = ThieveStatus.idle;
+    public ThieveStatus state = ThieveStatus.following;
     public Transform target = null;
+    public float minEscapeTime = 3f;
+    public float maxEscapeTime = 15f;
 
     [Header("Appearance")]
     public List<Sprite> sprites;
@@ -24,6 +26,8 @@ public class Thieve : MonoBehaviour
     public Rigidbody2D rigidBody;
     public GlobalEvent onStolen;
     public SpriteRenderer spriteRenderer;
+
+    public UnityEvent onStoleLocal;
 
     private Vector2 moveDirection;
     private List<Transform> targets = new List<Transform>();
@@ -37,11 +41,9 @@ public class Thieve : MonoBehaviour
     {
         switch (state)
         {
-            case ThieveStatus.idle:
-                moveDirection = Vector2.zero;
-                break;
             case ThieveStatus.following:
                 if (target) moveDirection = target.position - transform.position;
+                else moveDirection = Vector2.zero;
                 break;
             case ThieveStatus.escaping:
                 if (target) moveDirection = transform.position - target.position;
@@ -55,7 +57,6 @@ public class Thieve : MonoBehaviour
         targets.Add(target);
         if (!this.target || this.target.tag != "Player")
             this.target = target;
-        state = ThieveStatus.following;
     }
 
     public void RemoveTarget(Transform target)
@@ -65,9 +66,6 @@ public class Thieve : MonoBehaviour
 
         if (this.target == null && targets.Count != 0)
             this.target = targets[Random.Range(0, targets.Count - 1)];
-
-        if(this.target == null)
-            state = ThieveStatus.idle;
     }
 
     private void OnDisable()
@@ -95,17 +93,29 @@ public class Thieve : MonoBehaviour
                     var item = loot[i];
                     loot.RemoveAt(i);
                     onStolen.Raise(item);
+                    onStoleLocal.Invoke();
                     if (Random.value < escapeChance)
-                        state = ThieveStatus.escaping;
+                        Scare();
                 }
                 else
-                    state = ThieveStatus.escaping;
+                    Scare();
             } else
             {
-                state = ThieveStatus.escaping;
+                Scare();
             }
         }
         
+    }
+
+    public void Scare()
+    {
+        state = ThieveStatus.escaping;
+        Invoke("Prosecute", Random.Range(minEscapeTime, maxEscapeTime));
+    }
+
+    public void Prosecute()
+    {
+        state = ThieveStatus.following;
     }
 
     private void OnValidate()

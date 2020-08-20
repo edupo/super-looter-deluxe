@@ -11,14 +11,17 @@ public class ItemData
     public Color color;
     public int value;
     public Sprite sprite;
+    public AudioClip audio;
 }
 
 public class Item : Interactive
 {
     public ItemData data;
+    public float destroyDelay=1.0f;
 
     [Header("References")]
     new public SpriteRenderer renderer;
+    public UnityEvent onActuated;
 
     void Start()
     {
@@ -34,7 +37,13 @@ public class Item : Interactive
 
     override public bool Actuate()
     {
-        Destroy(gameObject);
+        Invoke("Destroy", destroyDelay);
+        onActuated.Invoke();
         return true;
+    }
+
+    private void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

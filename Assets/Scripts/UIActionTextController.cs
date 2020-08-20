@@ -17,7 +17,14 @@ public class UIActionTextController : UIController
     {
         var item = obj as ItemData;
         var color = ColorUtility.ToHtmlStringRGB(item.color);
-        text.text = $"{r}Stolen <color=#{color}>{item.description} {r}worth {y}{item.value}$";
+        text.text = $"{r}Stolen <color=#{color}>{item.description} {r}worth {y}{item.value}$!";
+    }
+
+    public void Thrown(object obj)
+    {
+        var item = obj as ItemData;
+        var color = ColorUtility.ToHtmlStringRGB(item.color);
+        text.text = $"{y}You throw <color=#{color}>{item.description} {y}worth {y}{item.value}$!";
     }
 
     private void OnValidate()

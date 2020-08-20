@@ -13,6 +13,7 @@ public class ItemMod
     public float valueMultiplierMax;
     [ColorUsage(false)]
     public Color color;
+    public AudioClip audio;
 
     public string RandPrefix()
     {
@@ -58,13 +59,21 @@ public class ItemGenerator : ScriptableObject
         Debug.Log($"'{item.description}' -> {item.value}");
     }
 
-    public ItemData Generate()
+    public ItemData Generate(int forceCategory = -1, int forceStatus = -1)
     {
         ItemData data = new ItemData();
 
         var item = itemBases[Random.Range(0, itemBases.Count)];
-        var cat = categories[Mathf.RoundToInt(catProb.Evaluate(Random.value) * (categories.Count - 1))];
-        var status = statuses[Mathf.RoundToInt(catProb.Evaluate(Random.value) * (statuses.Count - 1))];
+        ItemMod cat;
+        if (forceCategory >= 0)
+            cat = categories[forceCategory];
+        else
+            cat = categories[Mathf.RoundToInt(catProb.Evaluate(Random.value) * (categories.Count - 1))];
+        ItemMod status;
+        if (forceCategory >= 0)
+            status = statuses[forceStatus];
+        else 
+            status = statuses[Mathf.RoundToInt(catProb.Evaluate(Random.value) * (statuses.Count - 1))];
         var catRange = catProb.Evaluate(Random.value);
         var statusRange = statusProb.Evaluate(Random.value);
 
@@ -75,6 +84,7 @@ public class ItemGenerator : ScriptableObject
         data.description = GenerateName(item, cat, status);
         data.color = GenerateColor(cat, status);
         data.value = GenerateValue(item, cat, status, catRange, statusRange);
+        data.audio = cat.audio;
 
         return data;
     }
