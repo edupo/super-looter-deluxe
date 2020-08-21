@@ -106,9 +106,9 @@ public class MapGenerator : MonoBehaviour
 
                 float d = Vector2.Distance(origin, (Vector3)coord);
 
+                floorTiles[i] = floorTile;
                 if (d < playerClearance) // Skip player clearange
                 {
-                    floorTiles[i] = floorTile;
                 }
                 else if (x < worldBorder || y < worldBorder || x > mapSize.x - worldBorder || y > mapSize.y - worldBorder || height > wallThreshold)
                 {
@@ -142,8 +142,6 @@ public class MapGenerator : MonoBehaviour
                         objectTiles[i] = thiefTile;
                     else if (Random.value < timeChance)
                         objectTiles[i] = timeTile;
-                    else
-                        floorTiles[i] = floorTile;
                 }
 
             }

@@ -35,22 +35,23 @@ MonoBehaviour:
   m_Flags: 1
   m_ColliderType: 2
   Sprites:
-  - Sprite: {fileID: 6778370102577854318, guid: 281eb616ac01ee144bc8f35db1a92cc0,
+  - Sprite: {fileID: -6059362459672875974, guid: 2b1ea73aaad2cd748be0fd138737655d,
       type: 3}
     Weight: 1
-  - Sprite: {fileID: 2726496830753861816, guid: 281eb616ac01ee144bc8f35db1a92cc0,
+  - Sprite: {fileID: -2671084917369535722, guid: 2b1ea73aaad2cd748be0fd138737655d,
       type: 3}
     Weight: 1
-  - Sprite: {fileID: -6195967459898737139, guid: 281eb616ac01ee144bc8f35db1a92cc0,
+  - Sprite: {fileID: 8795115390010299559, guid: 2b1ea73aaad2cd748be0fd138737655d,
       type: 3}
     Weight: 1
-  - Sprite: {fileID: 833409412175589752, guid: 281eb616ac01ee144bc8f35db1a92cc0, type: 3}
-    Weight: 1
-  - Sprite: {fileID: -5301814471893477322, guid: 281eb616ac01ee144bc8f35db1a92cc0,
+  - Sprite: {fileID: 7894445565678079820, guid: 2b1ea73aaad2cd748be0fd138737655d,
       type: 3}
     Weight: 1
-  - Sprite: {fileID: -516317081129836767, guid: 281eb616ac01ee144bc8f35db1a92cc0,
+  - Sprite: {fileID: -8915819088472205766, guid: 2b1ea73aaad2cd748be0fd138737655d,
       type: 3}
     Weight: 1
-  - Sprite: {fileID: 0}
+  - Sprite: {fileID: 543596482536777334, guid: 2b1ea73aaad2cd748be0fd138737655d, type: 3}
+    Weight: 1
+  - Sprite: {fileID: 5796111093026465596, guid: 2b1ea73aaad2cd748be0fd138737655d,
+      type: 3}
     Weight: 0
